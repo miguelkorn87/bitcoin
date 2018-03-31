@@ -124,14 +124,14 @@ public:
 	consensus.hashGenesisBlock = uint256S("0x01");
 	if (true && genesis.GetHash() != consensus.hashGenesisBlock)
         {
-            Logprintf("recalculating params for mainnet.\n");
-            Logprintf("old mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old mainnet genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
+            LogPrintf("recalculating params for mainnet.\n");
+            LogPrintf("old mainnet genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("old mainnet genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
             // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+            for(genesis.nNonce == 0; consensus.powLimit < genesis.GetHash() ; genesis.nNonce++){ } 
+            LogPrintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            LogPrintf("new mainnet genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
         }
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
@@ -229,14 +229,14 @@ public:
 	consensus.hashGenesisBlock = uint256S("0x01");
 	if (true && genesis.GetHash() != consensus.hashGenesisBlock)
         {
-            Logprintf("recalculating params for testnet.\n");
-            Logprintf("old testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old testnet genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
+            LogPrintf("recalculating params for testnet.\n");
+            LogPrintf("old testnet genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("old testnet genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
             // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new testnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new testnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+            for(genesis.nNonce == 0; consensus.powLimit < genesis.GetHash(); genesis.nNonce++){ } 
+            LogPrintf("new testnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            LogPrintf("new testnet genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("new testnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
         }
 
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -330,14 +330,14 @@ public:
 	consensus.hashGenesisBlock = uint256S("0x01");
 	if (true && genesis.GetHash() != consensus.hashGenesisBlock)
         {
-            Logprintf("recalculating params for regtest.\n");
-            Logprintf("old regtest genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old regtest genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
+            LogPrintf("recalculating params for regtest.\n");
+            LogPrintf("old regtest genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("old regtest genesis hash:  %s\n", consensus.hashGenesisBlock.ToString().c_str());
             // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new regtest genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new regtest genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new regtest genesis hash: %s\n", genesis.GetHash().ToString().c_str());
+            for(genesis.nNonce == 0; consensus.powLimit < genesis.GetHash(); genesis.nNonce++){ } 
+            LogPrintf("new regtest genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+            LogPrintf("new regtest genesis nonce: %s\n", genesis.nNonce);
+            LogPrintf("new regtest genesis hash: %s\n", genesis.GetHash().ToString().c_str());
         }
 
         consensus.hashGenesisBlock = genesis.GetHash();
