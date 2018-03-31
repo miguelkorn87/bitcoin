@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Miguelkoin Core consensus library
+Description: Library for the Miguelkoin consensus protocol.
+Version: 0.16.99
+Libs: -L${libdir} -lmiguelkoinconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto
