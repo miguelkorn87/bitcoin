@@ -1,5 +1,5 @@
-#ifndef BITCOIN_QT_CALLBACK_H
-#define BITCOIN_QT_CALLBACK_H
+#ifndef MIGUELKOIN_QT_CALLBACK_H
+#define MIGUELKOIN_QT_CALLBACK_H
 
 #include <QObject>
 
@@ -27,4 +27,4 @@ FunctionCallback<F>* makeCallback(F f)
     return new FunctionCallback<F>(std::move(f));
 }
 
-#endif // BITCOIN_QT_CALLBACK_H
+#endif // MIGUELKOIN_QT_CALLBACK_H

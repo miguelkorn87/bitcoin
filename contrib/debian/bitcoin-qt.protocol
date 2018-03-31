@@ -1,6 +1,6 @@
 [Protocol]
-exec=bitcoin-qt '%u'
-protocol=bitcoin
+exec=miguelkoin-qt '%u'
+protocol=miguelkoin
 input=none
 output=none
 helper=true

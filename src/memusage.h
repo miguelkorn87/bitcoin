@@ -1,9 +1,9 @@
-// Copyright (c) 2015-2017 The Bitcoin Core developers
+// Copyright (c) 2015-2017 The Miguelkoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_MEMUSAGE_H
-#define BITCOIN_MEMUSAGE_H
+#ifndef MIGUELKOIN_MEMUSAGE_H
+#define MIGUELKOIN_MEMUSAGE_H
 
 #include <indirectmap.h>
 
@@ -166,4 +166,4 @@ static inline size_t DynamicUsage(const std::unordered_map<X, Y, Z>& m)
 
 }
 
-#endif // BITCOIN_MEMUSAGE_H
+#endif // MIGUELKOIN_MEMUSAGE_H

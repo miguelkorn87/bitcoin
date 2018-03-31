@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017 The Bitcoin Core developers
+# Copyright (c) 2017 The Miguelkoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test various command line arguments and configuration file parameters."""
@@ -7,10 +7,10 @@
 import os
 import re
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import MiguelkoinTestFramework
 
 
-class ConfArgsTest(BitcoinTestFramework):
+class ConfArgsTest(MiguelkoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -29,7 +29,7 @@ class ConfArgsTest(BitcoinTestFramework):
         self.nodes[0].assert_start_raises_init_error(['-datadir=' + new_data_dir], 'Error: Specified data directory "' + re.escape(new_data_dir) + '" does not exist.')
 
         # Check that using non-existent datadir in conf file fails
-        conf_file = os.path.join(default_data_dir, "bitcoin.conf")
+        conf_file = os.path.join(default_data_dir, "miguelkoin.conf")
         with open(conf_file, 'a', encoding='utf8') as f:
             f.write("datadir=" + new_data_dir + "\n")
         self.nodes[0].assert_start_raises_init_error(['-conf=' + conf_file], 'Error reading configuration file: specified data directory "' + re.escape(new_data_dir) + '" does not exist.')

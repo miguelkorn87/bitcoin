@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2017 The Bitcoin Core developers
+// Copyright (c) 2009-2017 The Miguelkoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_SIGN_H
-#define BITCOIN_SCRIPT_SIGN_H
+#ifndef MIGUELKOIN_SCRIPT_SIGN_H
+#define MIGUELKOIN_SCRIPT_SIGN_H
 
 #include <script/interpreter.h>
 
@@ -99,4 +99,4 @@ void UpdateInput(CTxIn& input, const SignatureData& data);
  * Solvability is unrelated to whether we consider this output to be ours. */
 bool IsSolvable(const SigningProvider& provider, const CScript& script);
 
-#endif // BITCOIN_SCRIPT_SIGN_H
+#endif // MIGUELKOIN_SCRIPT_SIGN_H

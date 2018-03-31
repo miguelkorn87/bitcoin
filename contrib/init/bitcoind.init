@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  bitcoind The bitcoin core server.
+#  miguelkoind The miguelkoin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: bitcoind
-# processname: bitcoind
+# description: miguelkoind
+# processname: miguelkoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/bitcoind, see below
-if [ -f /etc/sysconfig/bitcoind ]; then
-        . /etc/sysconfig/bitcoind
+# you can override defaults in /etc/sysconfig/miguelkoind, see below
+if [ -f /etc/sysconfig/miguelkoind ]; then
+        . /etc/sysconfig/miguelkoind
 fi
 
 RETVAL=0
 
-prog=bitcoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/bitcoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/bitcoind}
+prog=miguelkoind
+# you can override the lockfile via MIGUELKOIND_LOCKFILE in /etc/sysconfig/miguelkoind
+lockfile=${MIGUELKOIND_LOCKFILE-/var/lock/subsys/miguelkoind}
 
-# bitcoind defaults to /usr/bin/bitcoind, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/bitcoind}
+# miguelkoind defaults to /usr/bin/miguelkoind, override with MIGUELKOIND_BIN
+miguelkoind=${MIGUELKOIND_BIN-/usr/bin/miguelkoind}
 
-# bitcoind opts default to -disablewallet, override with BITCOIND_OPTS
-bitcoind_opts=${BITCOIND_OPTS--disablewallet}
+# miguelkoind opts default to -disablewallet, override with MIGUELKOIND_OPTS
+miguelkoind_opts=${MIGUELKOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    daemon $DAEMONOPTS $miguelkoind $miguelkoind_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

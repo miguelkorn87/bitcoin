@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2017 The Bitcoin Core developers
+// Copyright (c) 2009-2017 The Miguelkoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_FEES_H
-#define BITCOIN_WALLET_FEES_H
+#ifndef MIGUELKOIN_WALLET_FEES_H
+#define MIGUELKOIN_WALLET_FEES_H
 
 #include <amount.h>
 
@@ -43,4 +43,4 @@ CFeeRate GetMinimumFeeRate(const CCoinControl& coin_control, const CTxMemPool& p
  */
 CFeeRate GetDiscardRate(const CBlockPolicyEstimator& estimator);
 
-#endif // BITCOIN_WALLET_FEES_H
+#endif // MIGUELKOIN_WALLET_FEES_H
