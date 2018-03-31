@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2017 The Miguelkoin Core developers
+# Copyright (c) 2014-2017 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,10 +8,10 @@
 
     Miguelkoin should be started with the command line arguments:
         miguelkoind -testnet -daemon \
-                -zmqpubrawtx=tcp://127.0.0.1:28332 \
-                -zmqpubrawblock=tcp://127.0.0.1:28332 \
-                -zmqpubhashtx=tcp://127.0.0.1:28332 \
-                -zmqpubhashblock=tcp://127.0.0.1:28332
+                -zmqpubrawtx=tcp://127.0.0.1:29443 \
+                -zmqpubrawblock=tcp://127.0.0.1:29443 \
+                -zmqpubhashtx=tcp://127.0.0.1:29443 \
+                -zmqpubhashblock=tcp://127.0.0.1:29443
 
     We use the asyncio library here.  `self.handle()` installs itself as a
     future at the end of the function.  Since it never returns with the event
@@ -34,7 +34,7 @@ if not (sys.version_info.major >= 3 and sys.version_info.minor >= 5):
     print("This example only works with Python 3.5 and greater")
     sys.exit(1)
 
-port = 28332
+port = 29443
 
 class ZMQHandler():
     def __init__(self):
