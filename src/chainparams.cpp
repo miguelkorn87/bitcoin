@@ -112,10 +112,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xf9;
-        pchMessageStart[1] = 0xbe;
-        pchMessageStart[2] = 0xb4;
-        pchMessageStart[3] = 0xd9;
+        pchMessageStart[0] = 0xd7;
+        pchMessageStart[1] = 0xaf;
+        pchMessageStart[2] = 0xc9;
+        pchMessageStart[3] = 0xe1;
         nDefaultPort = 9444;
         nPruneAfterHeight = 100000;
 
@@ -153,10 +153,10 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 0000000000000000002d6cca6761c99b3c2e936f9a0e304b7c7651a993f461de (height 506081).
-            1516903077, // * UNIX timestamp of last known number of transactions
-            295363220,  // * total number of transactions between genesis and that timestamp
+            1522530693, // * UNIX timestamp of last known number of transactions
+            0,  // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            3.5         // * estimated number of transactions per second after that timestamp
+            0.000001    // * estimated number of transactions per second after that timestamp
         };
 
         /* disable fallback fee on mainnet */
@@ -204,10 +204,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x0000000002e9e7b00e1f6dc5123a04aad68dd0f0968d8c7aa45f6640795c37b1"); //1135275
 
-        pchMessageStart[0] = 0x0b;
-        pchMessageStart[1] = 0x11;
-        pchMessageStart[2] = 0x09;
-        pchMessageStart[3] = 0x07;
+        pchMessageStart[0] = 0xd7;
+        pchMessageStart[1] = 0xaf;
+        pchMessageStart[2] = 0xc9;
+        pchMessageStart[3] = 0xe1;
         nDefaultPort = 19444;
         nPruneAfterHeight = 1000;
 
@@ -244,9 +244,10 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 000000000000033cfa3c975eb83ecf2bb4aaedf68e6d279f6ed2b427c64caff9 (height 1260526)
-            1516903490,
-            17082348,
-            0.09
+            1522530693, // * UNIX timestamp of last known number of transactions
+            0,  // * total number of transactions between genesis and that timestamp
+                        //   (the tx=... number in the SetBestChain debug.log lines)
+            0.000001    // * estimated number of transactions per second after that timestamp
         };
 
         /* enable fallback fee on testnet */
@@ -290,10 +291,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0xd7;
+        pchMessageStart[1] = 0xaf;
+        pchMessageStart[2] = 0xc9;
+        pchMessageStart[3] = 0xe1;
         nDefaultPort = 18444;
         nPruneAfterHeight = 1000;
 
@@ -316,7 +317,7 @@ public:
         };
 
         chainTxData = ChainTxData{
-            0,
+            1522530558,
             0,
             0
         };
