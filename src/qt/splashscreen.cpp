@@ -157,6 +157,7 @@ void SplashScreen::slotFinish(QWidget *mainWin)
     /* Make sure we de-minimize the splashscreen window before hiding */
     if (isMinimized())
         showNormal();
+    sleep(1);
     hide();
     deleteLater(); // No more need for this
 }
