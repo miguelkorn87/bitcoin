@@ -48,7 +48,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "MiguelKorn87 created the new MiguelKoin on 31/03/2018";
+    const char* pszTimestamp = "MiguelKorn87 created the new MiguelKoin";
     const CScript genesisOutputScript = CScript() << ParseHex("04c3380ea755e53ee6c56dcd050fb892b5c8ea78e042d202795295ba4ed8a7f6ad88b9d888baaba366fda6116c80025c10608a0de1aaf3f12db081c49881f4369d") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -119,10 +119,10 @@ public:
         nDefaultPort = 9444;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1522530693, 2083236893, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1522530693, 2248916491, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000000009dcbfc9627d02abb8509d38be7a602b37b1267d32f746b603430256"));
+        assert(genesis.hashMerkleRoot == uint256S("0xad983730a70d35a5530136ec1ff664f99f1851af10f842c09560d8a487beaec3"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -147,7 +147,7 @@ public:
 
         checkpointData = {
             {
-                { 0, uint256S("0x001")},
+                { 0, uint256S("0x0000000009dcbfc9627d02abb8509d38be7a602b37b1267d32f746b603430256")},
             }
         };
 
@@ -211,10 +211,10 @@ public:
         nDefaultPort = 19444;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1522530693, 414098458, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1522530693, 957238324, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000000ce0d28465a575881027198b003d02885b4f321508c028ca73852ac44"));
+        assert(genesis.hashMerkleRoot == uint256S("0xad983730a70d35a5530136ec1ff664f99f1851af10f842c09560d8a487beaec3"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -238,7 +238,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("001")},
+                {0, uint256S("00000000ce0d28465a575881027198b003d02885b4f321508c028ca73852ac44")},
             }
         };
 
@@ -300,8 +300,8 @@ public:
 
         genesis = CreateGenesisBlock(1522530693, 2, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0d1feec609355bbe8e6a03af2b1165e5593f207cf155c51a98ca66c73d88751f"));
+        assert(genesis.hashMerkleRoot == uint256S("0xad983730a70d35a5530136ec1ff664f99f1851af10f842c09560d8a487beaec3"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -312,12 +312,12 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("001")},
+                {0, uint256S("0d1feec609355bbe8e6a03af2b1165e5593f207cf155c51a98ca66c73d88751f")},
             }
         };
 
         chainTxData = ChainTxData{
-            1522530558,
+            1522530693,
             0,
             0
         };
