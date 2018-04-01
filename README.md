@@ -1,27 +1,23 @@
 Miguelkoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/miguelkoin/miguelkoin.svg?branch=master)](https://travis-ci.org/miguelkoin/miguelkoin)
-
-https://miguelkoincore.org
-
 What is Miguelkoin?
 ----------------
 
-Miguelkoin is an experimental digital currency that enables instant payments to
+Miguelkoin is an experimental digital currency based on Bitcoin that enables instant payments to
 anyone, anywhere in the world. Miguelkoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
 out collectively by the network. Miguelkoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Miguelkoin Core software, see https://miguelkoin.org/en/download, or read the
-[original whitepaper](https://miguelkoincore.org/miguelkoin.pdf).
+the Miguelkoin Core software, see https://miguelkoin.duckdns.org, or read the
+[Bitcoin original whitepaper](https://bitcoincore.org/bitcoin.pdf).
 
 License
 -------
 
-Miguelkoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Miguelkoin is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process

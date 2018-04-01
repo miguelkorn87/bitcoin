@@ -1,6 +1,6 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Miguelkoin Core in Unix.
+Some notes on how to build Miguelkoin in Unix.
 
 (For BSD specific instructions, see [build-openbsd.md](build-openbsd.md) and/or
 [build-netbsd.md](build-netbsd.md))
@@ -20,7 +20,7 @@ To Build
 
 ```bash
 ./autogen.sh
-./configure
+./configure --with-gui
 make
 make install # optional
 ```
