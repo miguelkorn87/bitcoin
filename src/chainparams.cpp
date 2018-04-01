@@ -120,18 +120,6 @@ public:
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1522530693, 2083236893, 0x1d00ffff, 1, 50 * COIN);
-	hashGenesisBlock = uint256("0x01")
-	if (true && genesis.GetHash() != hashGenesisBlock)
-        {
-            Logprintf("recalculating params for mainnet.\n");
-            Logprintf("old mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old mainnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-            // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new mainnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new mainnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new mainnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-        }
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
@@ -224,20 +212,6 @@ public:
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1522530693, 414098458, 0x1d00ffff, 1, 50 * COIN);
-
-	hashGenesisBlock = uint256("0x01")
-	if (true && genesis.GetHash() != hashGenesisBlock)
-        {
-            Logprintf("recalculating params for testnet.\n");
-            Logprintf("old testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old testnet genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-            // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new testnet genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new testnet genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new testnet genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-        }
-
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
@@ -325,20 +299,6 @@ public:
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1522530693, 2, 0x207fffff, 1, 50 * COIN);
-
-	hashGenesisBlock = uint256("0x01")
-	if (true && genesis.GetHash() != hashGenesisBlock)
-        {
-            Logprintf("recalculating params for regtest.\n");
-            Logprintf("old regtest genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("old regtest genesis hash:  %s\n", hashGenesisBlock.ToString().c_str());
-            // deliberately empty for loop finds nonce value.
-            for(genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++){ } 
-            Logprintf("new regtest genesis merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-            Logprintf("new regtest genesis nonce: %s\n", genesis.nNonce.ToString().c_str());
-            Logprintf("new regtest genesis hash: %s\n", genesis.GetHash().ToString().c_str());
-        }
-
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
